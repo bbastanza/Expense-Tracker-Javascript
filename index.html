@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Expense Tracker</h1>
+    <form action="sendtojs" method="POST">
+        <div id="form-row-1">
+            <div id="amout-div">
+                Amount: <br>
+                $<input type="number" name="amount" style="text-align: center;" required>
+                <p></p>
+            </div>
+            <div id="where-div">
+                Spent At: <br>
+                <input type="text" placeholder="Where?" style="text-align: center;" required>
+                <p></p>
+            </div>
+
+        </div>
+        <div id="form-row-2">
+            <div id="type-buttons" style="text-align: left;">
+                Type: <br>
+                <input checked type="radio" name="payment-type" value="cash" required>Cash <br>
+                <input type="radio" name="payment-type" value="credit-card" required>Credit Card <br>
+                <input type="radio" name="payment-type" value="debit-card" required>Debit Card <br>
+                <input type="radio" name="payment-type" value="crypto" required>Crypto Coin <br>
+                <p></p>
+            </div>
+            <div id="date-div">
+                Date: <br>
+                <input type="date" name="date" id="date-input" required>
+                <p></p>
+            </div>
+        </div>
+
+        <div id="submit-div">
+            <input type="submit" value="Add Expense">
+
+        </div>
+    </form>
+    <p></p>
+    <table id="table">
+        <tr>
+            <th>Type</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Spent At</th>
+            <th>Remove</th>
+        </tr>
+        <tr>
+            <td>Crypto</td>
+            <td>7/30/2020</td>
+            <td>$100</td>
+            <td>Store</td>
+            <td><input type="button" value="X"></td>
+        </tr>
+        <tr>
+            <td>Crypto</td>
+            <td>7/30/2020</td>
+            <td>$100</td>
+            <td>Store</td>
+            <td><input type="button" value="X"></td>
+        </tr>
+        <tr>
+            <td>Crypto</td>
+            <td>7/30/2020</td>
+            <td>$100</td>
+            <td>Store</td>
+            <td><input type="button" value="X"></td>
+        </tr>
+    </table>
+    <script src="index.js"></script>
+</body>
+
+</html>
