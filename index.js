@@ -21,12 +21,37 @@ document.getElementById("remove-all").addEventListener("click", function () {
 // function to add expences
 document.getElementById("submit").addEventListener("click", function (e) {
     e.preventDefault();
+    addNewExpense();
+})
 
+// document.getElementById('place').addEventListener('keypress', function (e) {
+//     if (e.key === "Enter") {
+//         addNewExpense();
+//     }
+// });
+
+// document.getElementById('date').addEventListener('keypress', function (e) {
+//     if (e.key === "Enter") {
+//         addNewExpense();
+//     }
+// });
+// document.getElementById('amount').addEventListener('keypress', function (e) {
+//     if (e.key === "Enter") {
+//         addNewExpense();
+//     }
+// });
+document.getElementsByTagName('input').addEventListener('keypress', function (e) {
+    if (e.key === "Enter") {
+        addNewExpense();
+    }
+});
+
+function addNewExpense() {
     let expenses = getSavedExpenses();
 
     let newExpense = {
         id: new Date().getTime() * Math.random(),
-        amount: document.getElementById("amount").value,
+        amount: "$" + document.getElementById("amount").value,
         place: document.getElementById("place").value,
         type: "",
         date: document.getElementById("date").value,
@@ -47,8 +72,7 @@ document.getElementById("submit").addEventListener("click", function (e) {
     document.getElementById("table").innerHTML = ""
     window.localStorage.setItem('expenses', JSON.stringify(expenses));
     displayExpencesOnTable();
-})
-
+}
 
 // funciton to clear the form
 document.getElementById("clear").addEventListener("click", function (e) {
