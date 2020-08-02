@@ -10,47 +10,47 @@
 
 <body>
     <h1>Expense Tracker</h1>
+
     <form id="form">
         <div id="form-row-1">
             <div id="amount-div">
                 Amount: <br>
-                $<input id="amount" type="number" name="amount" style="text-align: center;" required>
+                $<input id="amount" class="input" type="number" style="text-align: center;" required>
                 <p></p>
             </div>
             <div id="where-div">
-                Spent At: <br>
-                <input id="place" type="text" placeholder="Where?" style="text-align: center;" required>
+                Place: <br>
+                <input id="place" class="input" type="text" placeholder="Where?" style="text-align: center;" required>
                 <p></p>
             </div>
-
         </div>
+
         <div id="form-row-2">
-            <div id="type-buttons" style="text-align: left;">
-                Type: <br>
-                <input checked type="radio" name="payment-type" value="Cash">Cash <br>
-                <input type="radio" name="payment-type" value="Credit">Credit Card <br>
-                <input type="radio" name="payment-type" value="Debit">Debit Card <br>
-                <input type="radio" name="payment-type" value="Crypto">Crypto Coin <br>
-                <p></p>
-            </div>
             <div id="date-div">
                 Date: <br>
-                <input type="date" name="date" id="date" required>
+                <input type="date" id="date" class="input" required>
+                <p></p>
+            </div>
+            <div id="type-buttons" style="text-align: left;">
+                Type: <br>
+                <input checked type="radio" class="input" name="payment-type" value="Cash">Cash <br>
+                <input type="radio" class="input" name="payment-type" value="Credit">Credit Card <br>
+                <input type="radio" class="input" name="payment-type" value="Debit">Debit Card <br>
+                <input type="radio" class="input" name="payment-type" value="Crypto">Crypto Coin <br>
                 <p></p>
             </div>
         </div>
 
         <div id="buttons">
-            <input id="submit" type="button" value="Add Expense">
+            <input class="input" id="submit" type="button" value="Add Expense">
             <input id="remove-all" type="button" value="Remove All Expenses">
             <input id="clear" type="button" value="Clear Form">
         </div>
-
     </form>
-    <p></p>
-    <table id="table">
 
-    </table>
+    <p></p>
+    <table id="table"></table>
+
     <script src="index.js"></script>
 </body>
 
