@@ -89,11 +89,11 @@ function displayExpencesOnTable() {
     const amountTh = document.createElement("th");
     const placeTh = document.createElement("th");
     const removeTh = document.createElement("th");
-    typeTh.innerHTML = "Type";
-    dateTh.innerHTML = "Date";
-    amountTh.innerHTML = "Amount";
-    placeTh.innerHTML = "Place";
-    removeTh.innerHTML = "Remove";
+    typeTh.textContent = "Type";
+    dateTh.textContent = "Date";
+    amountTh.textContent = "Amount";
+    placeTh.textContent = "Place";
+    removeTh.textContent = "Remove";
     thRow.appendChild(typeTh);
     thRow.appendChild(dateTh);
     thRow.appendChild(amountTh);
@@ -103,7 +103,7 @@ function displayExpencesOnTable() {
     document.getElementById("form").reset();
 
     for (let i = 0; i < expenses.length; i++) {
-        let expense = expenses[i];
+        const expense = expenses[i];
 
         if (expense !== null) {
             const tableRow = document.createElement("tr");
@@ -117,10 +117,10 @@ function displayExpencesOnTable() {
             removeButton.className = "delete"
             removeButton.innerHTML = "X";
             removeTd.appendChild(removeButton);
-            typeTd.innerHTML = expense.type;
-            dateTd.innerHTML = expense.date;
-            amountTd.innerHTML = expense.amount;
-            placeTd.innerHTML = expense.place;
+            typeTd.textContent = expense.type;
+            dateTd.textContent = expense.date;
+            amountTd.textContent = expense.amount;
+            placeTd.textContent = expense.place;
             tableRow.appendChild(typeTd);
             tableRow.appendChild(dateTd);
             tableRow.appendChild(amountTd);
@@ -132,16 +132,17 @@ function displayExpencesOnTable() {
 };
 
 // function to delete a expense
-let table = document.getElementById("table")
+const table = document.getElementById("table")
 table.addEventListener("click", function (e) {
-    const expenses = getSavedExpenses();
+    let expenses = getSavedExpenses();
 
     const item = e.target;
 
     for (let i = 0; i < expenses.length; i++) {
         const expense = expenses[i];
-        if (item.id == expense.id) {
-            expenses.splice(expense[i], 1);
+
+        if (expense.id == item.id) {
+            expenses.splice(i, 1)
         };
     };
 
