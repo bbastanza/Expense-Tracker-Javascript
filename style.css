@@ -80,7 +80,7 @@ h1 {
     border-radius: 30px;
     border: 3px solid #333;
     padding: 10px;
-    text-shadow: rgb(160, 139, 253);
+    text-shadow: 2px 1px rgb(127, 98, 255);
 }
 
 .delete {
@@ -89,6 +89,7 @@ h1 {
     color: whitesmoke;
     border: none;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .delete:hover {
@@ -97,4 +98,12 @@ h1 {
 
 .delete:active {
     background-color: red;
+}
+
+.input {
+    cursor: pointer;
+}
+
+#remove-all, #clear {
+    cursor: pointer;
 }
