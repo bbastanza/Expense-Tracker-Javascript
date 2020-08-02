@@ -1,6 +1,7 @@
 body {
     text-align: center;
     margin: 0 auto;
+    background-color: black;
     background-image: url(images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;

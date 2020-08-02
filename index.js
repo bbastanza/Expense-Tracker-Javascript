@@ -39,7 +39,7 @@ function addNewExpense() {
 
     let newExpense = {
         id: new Date().getTime() * Math.random(),
-        amount: "$" + document.getElementById("amount").value,
+        amount: `$${parseFloat(document.getElementById("amount").value).toFixed(2)}`,
         place: document.getElementById("place").value,
         type: "",
         date: document.getElementById("date").value,
