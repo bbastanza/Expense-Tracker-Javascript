@@ -20,12 +20,14 @@ table {
 
 td, th {
     border: thin solid black;
-    padding: 5px;
+    padding: 10px;
+    text-align: center;
 }
 
 th {
     background-color: rgb(51, 37, 248);
     color: whitesmoke;
+    font-weight: bold;
 }
 
 tr:nth-child(odd) {
@@ -35,6 +37,7 @@ tr:nth-child(odd) {
 tr:nth-child(even) {
     background-color: rgb(194, 181, 255);
 }
+
 
 form {
     text-align: center;
@@ -78,4 +81,20 @@ h1 {
     border: 3px solid #333;
     padding: 10px;
     text-shadow: rgb(160, 139, 253);
+}
+
+.delete {
+    border-radius: 10px;
+    background-color: rgb(51, 37, 248);
+    color: whitesmoke;
+    border: none;
+    font-weight: bold;
+}
+
+.delete:hover {
+    border: solid red 1px;
+}
+
+.delete:active {
+    background-color: red;
 }

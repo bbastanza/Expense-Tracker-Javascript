@@ -61,12 +61,10 @@ function addNewExpense() {
     document.getElementById("table").innerHTML = "";
     window.localStorage.setItem('expenses', JSON.stringify(expenses));
     displayExpencesOnTable();
-    document.getElementById("form").reset();
 };
 
 // funciton to clear the form
 document.getElementById("clear").addEventListener("click", function (e) {
-    e.preventDefault();
     document.getElementById("form").reset();
 });
 
@@ -103,6 +101,7 @@ function displayExpencesOnTable() {
     thRow.appendChild(placeTh);
     thRow.appendChild(removeTh);
     htmlTable.appendChild(thRow);
+    document.getElementById("form").reset();
 
     for (let i = 0; i < expenses.length; i++) {
         let expense = expenses[i];
