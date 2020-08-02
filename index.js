@@ -82,7 +82,6 @@ function getSavedExpenses() {
 // function to display all expenses on the table from local storage
 function displayExpencesOnTable() {
     let expenses = getSavedExpenses();
-    console.log(expenses)
     const htmlTable = document.getElementById("table");
     const thRow = document.createElement("tr");
     const typeTh = document.createElement("th");
@@ -128,27 +127,27 @@ function displayExpencesOnTable() {
             tableRow.appendChild(placeTd);
             tableRow.appendChild(removeTd);
             htmlTable.appendChild(tableRow);
-        }
+        };
     };
 };
 
 // function to delete a expense
 let table = document.getElementById("table")
 table.addEventListener("click", function (e) {
-    let expenses = getSavedExpenses();
+    const expenses = getSavedExpenses();
 
-    let item = e.target;
+    const item = e.target;
 
     for (let i = 0; i < expenses.length; i++) {
         const expense = expenses[i];
         if (item.id == expense.id) {
-            expenses.splice(expense[i], 1)
-        }
-    }
+            expenses.splice(expense[i], 1);
+        };
+    };
 
-    if (item.className === "delete"); {
+    if (item.className === "delete") {
         table.removeChild(item.parentNode.parentNode);
-    }
+    };
 
     window.localStorage.setItem('expenses', JSON.stringify(expenses));
 });
