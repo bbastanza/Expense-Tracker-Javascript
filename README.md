@@ -19,4 +19,4 @@ I learned a lot during this project and it really helped to cement some concepts
 
 
 ## Author
-Brian Bastanza
+Brian Bastanza- Full Stack Web Developer
