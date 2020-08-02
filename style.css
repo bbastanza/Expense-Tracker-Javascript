@@ -2,7 +2,9 @@ body {
     text-align: center;
     margin: 0 auto;
     background-image: url(images/background.jpg);
-    background-repeat: unset;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     color: whitesmoke;
     font-family: monospace;
     font-size: x-large;
