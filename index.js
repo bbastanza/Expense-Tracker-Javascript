@@ -4,7 +4,7 @@
 //
 // displays the table on start
 document.addEventListener("DOMContentLoaded", function () {
-    displayExpencesOnTable();
+    displayExpensesOnTable();
 });
 
 // event listener for remove all expenses button
@@ -15,7 +15,7 @@ document.getElementById("remove-all").addEventListener("click", function () {
 
     window.localStorage.setItem('expenses', JSON.stringify(expenses));
 
-    displayExpencesOnTable();
+    displayExpensesOnTable();
 });
 
 // function to add expences
@@ -37,30 +37,39 @@ for (let i = 0; i < document.getElementsByClassName('input').length; i++) {
 function addNewExpense() {
     let expenses = getSavedExpenses();
 
-    let newExpense = {
+    const newExpense = {
         id: new Date().getTime() * Math.random(),
-        amount: `$${parseFloat(document.getElementById("amount").value).toFixed(2)}`,
+        amount: parseFloat(document.getElementById("amount").value).toFixed(2),
         place: document.getElementById("place").value,
         type: "",
         date: document.getElementById("date").value,
     };
 
 
-    let paymentTypes = document.getElementsByName("payment-type")
+    const paymentTypes = document.getElementsByName("payment-type")
     for (let i = 0; i < paymentTypes.length; i++) {
         if (paymentTypes[i].checked) {
             newExpense.type = paymentTypes[i].value;
         };
     };
 
-    if (newExpense.amount === "") return;
-    if (newExpense.place === "") return;
-    if (newExpense.date === "") return;
+    if ((newExpense.amount === "" || newExpense.place === "" || newExpense.date === "") && isNaN(newExpense.amount) === true) {
+        alert("Please fill out all fields & amount must be a number");
+        return;
+    } else if (newExpense.amount === "" || newExpense.place === "" || newExpense.date === "") {
+        alert("Please fill out all fields");
+        return;
+    } else if (isNaN(newExpense.amount) === true) {
+        alert("Amount must be a number");
+        return;
+    };
+
+    newExpense.amount = `$${newExpense.amount}`
 
     expenses.push(newExpense);
     document.getElementById("table").innerHTML = "";
     window.localStorage.setItem('expenses', JSON.stringify(expenses));
-    displayExpencesOnTable();
+    displayExpensesOnTable();
 };
 
 // funciton to clear the form
@@ -80,7 +89,7 @@ function getSavedExpenses() {
 
 
 // function to display all expenses on the table from local storage
-function displayExpencesOnTable() {
+function displayExpensesOnTable() {
     let expenses = getSavedExpenses();
     const htmlTable = document.getElementById("table");
     const thRow = document.createElement("tr");
@@ -114,7 +123,7 @@ function displayExpencesOnTable() {
             const removeTd = document.createElement("td");
             const removeButton = document.createElement("button");
             removeButton.id = expense.id;
-            removeButton.className = "delete"
+            removeButton.className = "delete";
             removeButton.innerHTML = "X";
             removeTd.appendChild(removeButton);
             typeTd.textContent = expense.type;
@@ -132,7 +141,7 @@ function displayExpencesOnTable() {
 };
 
 // function to delete a expense
-const table = document.getElementById("table")
+const table = document.getElementById("table");
 table.addEventListener("click", function (e) {
     let expenses = getSavedExpenses();
 
@@ -142,7 +151,7 @@ table.addEventListener("click", function (e) {
         const expense = expenses[i];
 
         if (expense.id == item.id) {
-            expenses.splice(i, 1)
+            expenses.splice(i, 1);
         };
     };
 
