@@ -30,8 +30,8 @@ for (let i = 0; i < document.getElementsByClassName('input').length; i++) {
     input.addEventListener('keypress', function (e) {
         if (e.key === "Enter") {
             addNewExpense();
-        }
-    })
+        };
+    });
 };
 
 function addNewExpense() {
