@@ -53,10 +53,11 @@ function addNewExpense() {
         };
     };
 
-    if ((newExpense.amount === "" || newExpense.place === "" || newExpense.date === "") && isNaN(newExpense.amount) === true) {
+
+    if ((newExpense.place === "" || newExpense.date === "") && isNaN(newExpense.amount) === true) {
         alert("Please fill out all fields & amount must be a number");
         return;
-    } else if (newExpense.amount === "" || newExpense.place === "" || newExpense.date === "") {
+    } else if (newExpense.place === "" || newExpense.date === "") {
         alert("Please fill out all fields");
         return;
     } else if (isNaN(newExpense.amount) === true) {
