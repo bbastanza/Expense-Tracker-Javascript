@@ -1,57 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vanilla Expense Tracker</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanilla Expense Tracker</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <body>
+        <h1>Expense Tracker</h1>
 
-<body>
-    <h1>Expense Tracker</h1>
-
-    <form id="form">
-        <div id="form-row-1">
-            <div id="amount-div">
-                Amount: <br>
-                $<input id="amount" class="input" type="number" placeholder="$$$" style="text-align: center;" required>
-                <p></p>
+        <form id="form">
+            <div id="form-row-1">
+                <div id="amount-div">
+                    Amount: <br />
+                    $<input
+                        id="amount"
+                        class="input"
+                        type="number"
+                        placeholder="$$$"
+                        style="text-align: center;"
+                        required
+                    />
+                    <p></p>
+                </div>
+                <div id="where-div">
+                    Place: <br />
+                    <input
+                        id="place"
+                        class="input"
+                        type="text"
+                        placeholder="Where?"
+                        style="text-align: center;"
+                        required
+                    />
+                    <p></p>
+                </div>
             </div>
-            <div id="where-div">
-                Place: <br>
-                <input id="place" class="input" type="text" placeholder="Where?" style="text-align: center;" required>
-                <p></p>
+
+            <div id="form-row-2">
+                <div id="date-div">
+                    Date: <br />
+                    <input type="date" id="date" class="input" required />
+                    <p></p>
+                </div>
+                <div id="type-buttons" style="text-align: left;">
+                    Type: <br />
+
+                    <input checked id="radio-cash" type="radio" class="input" name="payment-type" value="Cash" />
+                    <label for="radio-cash">Cash</label> <br />
+                    <input id="radio-credit" type="radio" class="input" name="payment-type" value="Credit" />
+                    <label for="radio-credit">Credit Card </label><br />
+                    <input id="radio-debit" type="radio" class="input" name="payment-type" value="Debit" />
+                    <label for="radio-debit">Debit Card</label> <br />
+                    <input id="radio-crypto" type="radio" class="input" name="payment-type" value="Crypto" />
+                    <label for="radio-crypto">Crypto Coin</label> <br />
+                    <p></p>
+                </div>
             </div>
-        </div>
 
-        <div id="form-row-2">
-            <div id="date-div">
-                Date: <br>
-                <input type="date" id="date" class="input" required>
-                <p></p>
+            <div id="buttons">
+                <input class="input" id="submit" type="button" value="Add Expense" />
+                <input id="remove-all" type="button" value="Remove All Expenses" />
+                <input id="clear" type="button" value="Clear Form" />
             </div>
-            <div id="type-buttons" style="text-align: left;">
-                Type: <br>
-                <input checked type="radio" class="input" name="payment-type" value="Cash">Cash <br>
-                <input type="radio" class="input" name="payment-type" value="Credit">Credit Card <br>
-                <input type="radio" class="input" name="payment-type" value="Debit">Debit Card <br>
-                <input type="radio" class="input" name="payment-type" value="Crypto">Crypto Coin <br>
-                <p></p>
-            </div>
-        </div>
+        </form>
+        <p></p>
 
-        <div id="buttons">
-            <input class="input" id="submit" type="button" value="Add Expense">
-            <input id="remove-all" type="button" value="Remove All Expenses">
-            <input id="clear" type="button" value="Clear Form">
-        </div>
-    </form>
-    <p></p>
+        <table id="table"></table>
 
-    <table id="table"></table>
-
-    <script src="index.js"></script>
-</body>
-
+        <script src="index.js"></script>
+    </body>
 </html>

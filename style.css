@@ -21,7 +21,8 @@ table {
     padding: 10px;
 }
 
-td, th {
+td,
+th {
     border: thin solid black;
     padding: 10px;
     text-align: center;
@@ -41,13 +42,12 @@ tr:nth-child(even) {
     background-color: rgb(194, 181, 255);
 }
 
-
 form {
     text-align: center;
     margin: 0 auto;
     padding: 20px;
     background-color: rgb(194, 181, 255);
-    width: 500px;
+    width: 600px;
     color: black;
     border-radius: 30px;
     border: 3px solid #333;
@@ -68,12 +68,15 @@ form {
 }
 
 #date-div {
- margin-right: 100px;
- margin-top: 20px;
+    margin-right: 100px;
+    margin-top: 20px;
 }
 
 #where-div {
     margin-left: 30px;
+}
+#amout {
+    width: 100px;
 }
 
 h1 {
@@ -103,10 +106,9 @@ h1 {
     background-color: red;
 }
 
-.input {
-    cursor: pointer;
-}
-
-#remove-all, #clear {
+.input,
+#remove-all,
+#clear,
+label {
     cursor: pointer;
 }
