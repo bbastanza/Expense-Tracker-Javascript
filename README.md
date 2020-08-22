@@ -1,4 +1,4 @@
-# Vanilla JS Expense Tracker
+# Javascript Expense Tracker
 
 > Expense Tracker app written in pure JS, HTML & CSS
 
@@ -10,11 +10,9 @@ Check out the app [here](https://bbastanza.github.io/expense-vanilla/)
 
 ## Summary
 
-I made this app to further my knowledge of JS, HTML and CSS.
+Building this app I learned more about using HTML tables to display things in a clear and organized way. I was able to work with HTML forms in this and get more comfortable with sending data back and forth from JS and HTML.
 
-Building this app I learned more about using forms in HTML to edit the DOM and how to edit HTML tables through javascript.
-
-I learned a lot during this project and it really helped to cement some concepts I was previously working on while adding a few more minor concepts on top.
+I learned a lot during this project. Doing this made me more comfortable using vanilla Javascript and really solidified a lot of the learning I had done up to this point. I know that the process of interacting with HTML through Javascript will be very valueable in the future while working on front end aspects of future, more challenging, applications.
 
 ## Author
 
