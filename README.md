@@ -4,7 +4,7 @@
 
 ![js](MDimages/javascript.png) ![html](MDimages/html.png) ![css](MDimages/css.png)
 
-Check out the app [here](https://bbastanza.github.io/expense-vanilla/)
+Check out the app [here](https://bbastanza.github.io/Expense-Tracker-Javascript/)
 
 ![Screenshot](MDimages/screenshot.png)
 
