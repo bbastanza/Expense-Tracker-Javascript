@@ -20,6 +20,6 @@ I learned a lot during this project. Doing this made me more comfortable using v
 
 ### Brian Bastanza- Full Stack Web Developer
 
-[Personal Website](www.brianbastanza.me)
+<a href="https://www.brianbastanza.me/" target="_blank" rel="noopener">Personal Website</a>
 
 [LinkedIn](www.linkedin.com/in/brian-bastanza-9035397b)
