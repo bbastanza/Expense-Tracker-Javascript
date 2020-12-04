@@ -22,4 +22,4 @@ I learned a lot during this project. Doing this made me more comfortable using v
 
 <a href="https://www.brianbastanza.me/" target="_blank" rel="noopener">Personal Website</a>
 
-[LinkedIn](www.linkedin.com/in/brian-bastanza-9035397b)
+[LinkedIn](https://www.linkedin.com/in/bbastanza)
